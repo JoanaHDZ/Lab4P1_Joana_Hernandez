@@ -49,10 +49,10 @@ public class Lab4P1_Joana_Hernandez {
        
     }
     static void convertirBinario(Scanner sc) {
-        System.out.print("Escriba un número binario de 8 dígitos: ");
+        System.out.print("Escriba un numero binario de 8 digitos: ");
         String binario = sc.nextLine();
 
-        if (binario.length() == 8 && (binario.replace("0", "").replace("1", "").isEmpty())) {
+        if (binario.length() == 8) {
             int decimal = 0;
             int potencia = 1;
             for (int i = binario.length() - 1; i >= 0; i--) {
@@ -63,7 +63,7 @@ public class Lab4P1_Joana_Hernandez {
             }
             System.out.println("Decimal: " + decimal);
         } else {
-            System.out.println("Número binario inválido.");
+            System.out.println("Numero invalido.");
         }
     }
     
@@ -108,7 +108,7 @@ public class Lab4P1_Joana_Hernandez {
     static void formarPalabra(Scanner sc) {
         System.out.print("Escriba una frase o palabra: ");
         String frase = sc.nextLine();
-        System.out.print("Escriba la palabra a formar (máximo 10 caracteres): ");
+        System.out.print("Escriba la palabra a formar: ");
         String palabra = sc.nextLine();
 
         if (palabra.length() > 10) {
@@ -126,7 +126,6 @@ public class Lab4P1_Joana_Hernandez {
                 System.out.println("No se pudo formar la palabra completa.");
             }
         }
-
         System.out.println("Frase modificada: " + frase);
         System.out.println("Palabra formada: " + resultado);
     }
