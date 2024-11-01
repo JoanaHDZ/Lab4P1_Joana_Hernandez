@@ -17,8 +17,7 @@ public class Lab4P1_Joana_Hernandez {
         // TODO code application logic here
        Scanner scanner = new Scanner(System.in);
        int respuesta;
-       
-      //  do {
+       do {
         System.out.println("Menu de opciones");
         System.out.println("1-conversion a binario");
         System.out.println("2-validar correos");
@@ -31,14 +30,17 @@ public class Lab4P1_Joana_Hernandez {
             case 1: 
               
                 System.out.print("Ingrese su cadena de numeros de 0 y 1: ");
+                scanner.nextLine();
                 String cadena = scanner.nextLine();
                 
                 int x = cadena.length();
                 
-                int binario = 0;
-                        for (int i = 1; i < cadena.length(); i++) {
-                        binario = x * i^i;
-                        
+                int decimal = 0;
+                        for (int i = 0; i < cadena.length(); i++) {
+                        char numerochar = cadena.charAt(i);
+                        int numero = Integer.parseInt(Character.toString(numerochar));
+                            decimal = 2^ numero + decimal;
+                        //puedes hacer el codigo mas sencillo, entendible (un codigo que parezca que lo hizo alguien que no sabe programar)  y que sea dificil de plagear?
                /* int bandera =0;
                 for (int n = 1; n < x; n++) {
                     if (n==1 || n == 0) {
@@ -57,7 +59,7 @@ public class Lab4P1_Joana_Hernandez {
                 }*/
                 
                 }
-              System.out.print("Conversion " + binario);
+              System.out.print("Conversion " + decimal + " ");
               /* if (cadena.length() > 8 || cadena.length() != 0 || cadena.length() != 1 ) {
                     System.out.println("Cadena invalida");
                 } else {
@@ -82,7 +84,7 @@ public class Lab4P1_Joana_Hernandez {
         
         
         
-       // } while (respuesta != 4);
+       } while (respuesta != 4);
         // aqui termina
     }
     
